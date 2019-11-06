@@ -1,21 +1,28 @@
 import soundfile as sf
 import math
 import numpy as np
-#phase_enc("..\data\coverAudio.wav", "lul", 1024)
 
 
-def phase_enc(signal, text, L):
+def phase_enc(signal, text):
 
     data, samplerate = sf.read(signal)
+
     # get one channel
     new_data = data[:,0]
 
     #convert text to bit
     bitText = toBits(text)
 
+    #Get length of each frame
+    L = int(len(data) / 261)
+    if L % 2 != 0:
+        L = L - 1
+
     I = len(new_data)
 
     #length of bit sequence to hide
+    text_len = len(text)
+    text_len_bit = toBits(str(text_len))
     m = len(bitText)
 
     #number of frames
@@ -24,18 +31,17 @@ def phase_enc(signal, text, L):
     segments = np.reshape(new_data[0:(N * L)], (L, N), 'F')
 
     w = np.fft.fft(segments, axis=0)
-    invW = np.fft.ifft(w, axis=0)
     Phi = np.angle(w)
     A = np.abs(w)
 
 
     DeltaPhi = np.zeros((L, N))
 
-    #Calculating phase differences of adjacent segments DOBRE!!!!!!
+    #Calculating phase differences of adjacent segments
     for i in range(1, N):
         DeltaPhi[:,i] = Phi[:,i] - Phi[:,i-1]
 
-    #Binary data is represented as {-pi / 2, pi / 2} and stored in PhiData DOBRE!!!!
+    #Binary data is represented as {-pi / 2, pi / 2} and stored in PhiData
     PhiData = np.zeros(m)
 
     for count, ele in enumerate(bitText):
@@ -60,7 +66,10 @@ def phase_enc(signal, text, L):
 
     snew = np.reshape(z, N * L, 'F')
     out = np.append(snew, new_data[N * L: I])
-    sf.write(signal +  '_stego.wav', out, samplerate)
+    data[:,0] = out
+
+    sf.write(signal +  '_stego.wav', data, samplerate)
+    print("Stego signal is generated!")
 
 
 def toBits(s):
@@ -77,3 +86,10 @@ def fromBits(bits):
         byte = bits[b*8:(b+1)*8]
         chars.append(chr(int(''.join([str(bit) for bit in byte]), 2)))
     return ''.join(chars)
+
+def checkEqual(data, out):
+    for i in range(len(out)):
+        if data[i, 0] != out[i]:
+            return "nie sa rowne, ale powinny byc"
+        else:
+            return "sa rowne"
