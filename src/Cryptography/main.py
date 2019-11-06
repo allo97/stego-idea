@@ -8,4 +8,4 @@ encryptFile("../data/test.xml", "alek")
 
 decryptFile("../data/encrypted.xml", "alek")
 
-phase_enc("..\data\coverAudio.wav", "Stego signal is saved in ", 1024)
+phase_enc("..\data\coverAudio.wav", "a l", 1024)
