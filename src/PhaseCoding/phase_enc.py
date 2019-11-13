@@ -13,16 +13,23 @@ def phase_enc(signal, text):
     #convert text to bit
     bitText = toBits(text)
 
+    # amount of frames
+    F = 50
+
     #Get length of each frame
-    L = int(len(data) / 261)
+    L = int(len(data) / F)
     if L % 2 != 0:
         L = L - 1
 
     I = len(new_data)
 
-    #length of bit sequence to hide
-    text_len = len(text)
-    text_len_bit = toBits(str(text_len))
+    # Reserve place for information about length of text -> max 32 bits
+    list_of_bits = [int(x) for x in list('{0:032b}'.format(len(text)))]
+
+    # Add length info to actual text
+    bitText.extend(list_of_bits)
+
+    # length of bit sequence to hide
     m = len(bitText)
 
     #number of frames
@@ -68,8 +75,10 @@ def phase_enc(signal, text):
     out = np.append(snew, new_data[N * L: I])
     data[:,0] = out
 
-    sf.write(signal +  '_stego.wav', data, samplerate)
-    print("Stego signal is generated!")
+    x = signal.split(".")
+
+    sf.write(x[0] + '_stego.wav', data, samplerate)
+    print("Stego signal saved in " + x[0] + "_stego.wav !")
 
 
 def toBits(s):
@@ -80,12 +89,7 @@ def toBits(s):
         result.extend([int(b) for b in bits])
     return result
 
-def fromBits(bits):
-    chars = []
-    for b in range(len(bits) // 8):
-        byte = bits[b*8:(b+1)*8]
-        chars.append(chr(int(''.join([str(bit) for bit in byte]), 2)))
-    return ''.join(chars)
+
 
 def checkEqual(data, out):
     for i in range(len(out)):
