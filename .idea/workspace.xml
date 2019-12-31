@@ -6,55 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0630d48-8880-476f-ba37-6c69c231b5a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data/data_from_embedding/coverAudio_stego.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/data_to_embedding/tekst.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/data_to_embedding/test.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/test2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AudioLoad/file_example_WAV_1MG.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AudioLoad/loadAudio.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cryptography/_stego.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cryptography/fileEncryptAndDecrypt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cryptography/key.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cryptography/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LSBalghoritm/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LSBalghoritm/embedFile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LSBalghoritm/extractFile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LSBalghoritm/song_embedded.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PhaseCoding/phase_dec.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PhaseCoding/phase_enc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SpreadSpectrum/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SpreadSpectrum/mixer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SpreadSpectrum/spectrum_dec.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SpreadSpectrum/spectrum_enc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Cleo.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data_to_embedding/Cleo.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Cleo_stego.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data_from_embedding/Cleo_stego.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/coverAudio (online-audio-converter.com).mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/coverAudio.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data_to_embedding/coverAudio.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/coverAudio_stego.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/decrypted.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/dlugiTekst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data_to_embedding/dlugiTekst.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/encrypted.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/isntSheLovelyWav.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data_to_embedding/isntSheLovelyWav.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/isntSheLovelyWav_stego.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data_from_embedding/isntSheLovelyWav_stego.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/tekst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pyAesCrypt/BinaryStreamEncryptionDecryption.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pyAesCrypt/FileEncryptionDecryption.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pyAesCrypt/data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pyAesCrypt/data.txt.aes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pyAesCrypt/dataout.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pyAesCrypt/dataout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pyAesCrypt/encrypted.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pyAesCrypt/file_example_WAV_1MG.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pyAesCrypt/file_example_WAV_1MG.wav.aes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pyAesCrypt/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pyAesCrypt/test.encrypted" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pyAesCrypt/test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pyAesCrypt/test.xml.aes" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/LSBalgorithm/LSB_algorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+            <state relative-caret-position="93">
+              <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
               <folding>
                 <element signature="e#101#112#0" expanded="true" />
               </folding>
@@ -471,19 +423,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.20726173" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50080776" side_tool="true" weight="0.19810326" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
-      <window_info active="true" anchor="bottom" id="Debug" order="2" sideWeight="0.49894625" visible="true" weight="0.37198067" />
+      <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.49894625" weight="0.6988728" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32850242" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3252818" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.6763285" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50105375" side_tool="true" weight="0.41384864" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49947312" weight="0.3290461" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -898,8 +849,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LSBalgorithm/LSB_algorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        <state relative-caret-position="93">
+          <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
           <folding>
             <element signature="e#101#112#0" expanded="true" />
           </folding>
