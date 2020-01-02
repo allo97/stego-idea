@@ -6,7 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0630d48-8880-476f-ba37-6c69c231b5a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/data_from_embedding/stego_coverAudio.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data_from_embedding/stego_coverAudio.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/data_from_embedding/stego_pcm1608s.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data_from_embedding/stego_pcm1608s.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/hidden_message/secret.decrypted" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/hidden_message/secret.decrypted" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/LSBalgorithm/LSB_algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LSBalgorithm/LSB_algorithm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/PhaseCoding/phase_dec.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/PhaseCoding/phase_dec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/PhaseCoding/phase_enc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/PhaseCoding/phase_enc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,10 +40,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+            <state relative-caret-position="462">
+              <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/PhaseCoding/phase_enc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="123" column="24" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/PhaseCoding/phase_dec.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-628">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="10" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/LSBalgorithm/LSB_algorithm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#101#112#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,19 +89,10 @@
         <entry file="file://$PROJECT_DIR$/src/test/test2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/randomText.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="505" lean-forward="true" selection-start-column="505" selection-end-column="505" />
             </state>
           </provider>
         </entry>
@@ -77,31 +110,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/string.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/LSBalgorithm/LSB_algorithm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-              <folding>
-                <element signature="e#101#112#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/hidden_message/secret.decrypted">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="793" selection-end-line="2" />
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -120,6 +132,12 @@
       <find>K</find>
       <find>plot_count</find>
       <find>time_duration</find>
+      <find>math</find>
+      <find>N</find>
+      <find>Phi_2</find>
+      <find>A</find>
+      <find>A</find>
+      <find>segments</find>
       <find>print</find>
     </findStrings>
   </component>
@@ -129,8 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Cryptography/test.xml" />
-        <option value="$PROJECT_DIR$/src/pyAesCrypt/data.txt" />
         <option value="$PROJECT_DIR$/src/pyAesCrypt/main.py" />
         <option value="$PROJECT_DIR$/src/pyAesCrypt/FileEncryptionDecryption.py" />
         <option value="$PROJECT_DIR$/src/pyAesCrypt/BinaryStreamEncryptionDecryption.py" />
@@ -172,20 +188,22 @@
         <option value="$PROJECT_DIR$/src/PhaseCoding/phase_enc.py" />
         <option value="$PROJECT_DIR$/src/PhaseCoding/phase_dec.py" />
         <option value="$PROJECT_DIR$/src/test.py" />
-        <option value="$PROJECT_DIR$/src/main/PhaseCoding/phase_enc.py" />
         <option value="$PROJECT_DIR$/src/main/main.py" />
         <option value="$PROJECT_DIR$/src/main/GenerateRandomString/random_string.py" />
         <option value="$PROJECT_DIR$/src/main/MyCryptography/file_encrypt_and_decrypt.py" />
         <option value="$PROJECT_DIR$/src/data/data_to_embedding/tekst.txt" />
         <option value="$PROJECT_DIR$/src/test/test2.py" />
+        <option value="$PROJECT_DIR$/src/data/hidden_message/secret.decrypted" />
         <option value="$PROJECT_DIR$/src/main/LSBalgorithm/LSB_algorithm.py" />
+        <option value="$PROJECT_DIR$/src/main/PhaseCoding/phase_enc.py" />
+        <option value="$PROJECT_DIR$/src/main/PhaseCoding/phase_dec.py" />
         <option value="$PROJECT_DIR$/src/test/test.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-293" />
-    <option name="y" value="296" />
+    <option name="x" value="1562" />
+    <option name="y" value="-97" />
     <option name="width" value="1380" />
     <option name="height" value="754" />
   </component>
@@ -219,6 +237,20 @@
               <item name="MyStego" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="data_from_embedding" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyStego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyStego" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="data_to_embedding" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyStego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyStego" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="hidden_message" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -232,7 +264,14 @@
               <item name="MyStego" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="MyCryptography" type="462c0819:PsiDirectoryNode" />
+              <item name="LSBalgorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyStego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyStego" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="PhaseCoding" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyStego" type="b2602c69:ProjectViewProjectNode" />
@@ -243,6 +282,57 @@
             <path>
               <item name="MyStego" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="MyStego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="MyStego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Python37" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyStego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Python37" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyStego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Python37" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyStego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="DLLs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyStego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyStego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyStego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -422,25 +512,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="1358" y="-312" width="1296" height="1010" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.20726173" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.22168285" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50080776" side_tool="true" weight="0.19810326" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
-      <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.49894625" weight="0.6988728" />
+      <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.49894625" visible="true" weight="0.2690992" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32850242" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.6763285" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2622577" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50105375" side_tool="true" weight="0.41384864" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49947312" weight="0.3290461" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" x="1366" y="-281" width="1280" height="971" id="Run" maximized="true" order="3" type="WINDOWED" visible="true" weight="0.28290468" />
+      <window_info active="true" anchor="right" x="1366" y="-281" width="1280" height="971" id="Run" maximized="true" order="3" type="WINDOWED" visible="true" weight="0.28290468" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.20163691" />
@@ -546,14 +637,14 @@
           <option name="timeStamp" value="190" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/main/LSBalgorithm/LSB_algorithm.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="213" />
+          <url>file://$PROJECT_DIR$/src/test/test.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="234" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/main/LSBalgorithm/LSB_algorithm.py</url>
-          <line>28</line>
-          <option name="timeStamp" value="214" />
+          <url>file://$PROJECT_DIR$/src/main/PhaseCoding/phase_enc.py</url>
+          <line>131</line>
+          <option name="timeStamp" value="239" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -580,7 +671,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/LSBalghoritm/embedFile.py" />
     <entry file="file://$PROJECT_DIR$/src/LSBalghoritm/extractFile.py" />
     <entry file="file://$PROJECT_DIR$/src/data/encrypted.xml" />
     <entry file="file://$PROJECT_DIR$/src/Cryptography/pyCrypt.py" />
@@ -687,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/soundfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="378" column="4" selection-start-line="378" selection-start-column="4" selection-end-line="378" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/SpreadSpectrum/spectrum_enc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -735,26 +818,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test.encrypted" />
     <entry file="file://$PROJECT_DIR$/src/data/hidden_message/recovered_message.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/PhaseCoding/phase_enc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="102" column="36" lean-forward="true" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/PhaseCoding/phase_dec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/random.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1321">
@@ -779,30 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/string.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/hidden_message/secret.decrypted">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="793" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MyCryptography/file_encrypt_and_decrypt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -820,6 +859,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/string.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/MyCryptography/file_encrypt_and_decrypt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/randomText.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -830,29 +886,66 @@
     <entry file="file://$PROJECT_DIR$/src/test/test2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/hidden_message/secret.decrypted">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LSBalgorithm/LSB_algorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#101#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/_soundfile_data/COPYING">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/soundfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="1403" column="47" lean-forward="true" selection-start-line="1403" selection-start-column="47" selection-end-line="1403" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/PhaseCoding/phase_dec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-628">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        <state relative-caret-position="462">
+          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LSBalgorithm/LSB_algorithm.py">
+    <entry file="file://$PROJECT_DIR$/src/main/PhaseCoding/phase_enc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+        <state relative-caret-position="153">
+          <caret line="123" column="24" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
           <folding>
-            <element signature="e#101#112#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>

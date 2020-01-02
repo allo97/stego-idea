@@ -1,5 +1,4 @@
 import soundfile as sf
-import math
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -11,18 +10,32 @@ def encode(signal, text):
 
     song_name = signal.split("/")[-1]
 
-    # get one channel
-    new_data = data[:, 0]
-
-    # amount of frames
-    F = 50
+    # number of frames
+    N = 10
 
     # Get length of each frame
-    L = int(len(data) / F)
+    I = len(data)
+    L = int(I / N)
     if L % 2 != 0:
         L = L - 1
 
-    I = len(new_data)
+    #check if there is stereo signal
+    shape_of_data = np.shape(data)
+    is_stereo = True
+    new_data = []
+    if len(shape_of_data) > 1:
+        if shape_of_data[1] == 2:
+            # get one channel
+            new_data = data[:, 0]
+        else:
+            print("Program nie obsługuje więcej niż dwóch kanałów!")
+            exit()
+    else:
+        new_data = data
+        is_stereo = False
+
+
+
 
     # convert text to bit
     bitText = toBits(text)
@@ -36,9 +49,12 @@ def encode(signal, text):
     # length of bit sequence to hide
     m = len(bitText)
 
-    # number of frames
-    N = int(np.floor(I / L))
-
+    #check if file is too big to embed the data
+    if L / 2 < m:
+        answer = "Plik jest za duży! Usuń conajmniej " + str(
+            int((m - ((L / 2) - (L / 2) % 8)))/8) + " znaków z pliku! \nSpróbuj jeszcze raz!"
+        print(answer)
+        exit()
     segments = np.reshape(new_data[0:(N * L)], (L, N), 'F')
 
     w = np.fft.fft(segments, axis=0)
@@ -56,9 +72,9 @@ def encode(signal, text):
 
     for count, ele in enumerate(bitText):
         if ele == 0:
-            PhiData[count] = (math.pi / 2)
+            PhiData[count] = (np.pi / 2)
         else:
-            PhiData[count] = (-math.pi / 2)
+            PhiData[count] = (-np.pi / 2)
 
     # PhiData is written onto the middle of first phase matrix
     Phi_new = np.zeros((L, N))
@@ -101,7 +117,13 @@ def encode(signal, text):
 
     snew = np.reshape(z, N * L, 'F')
     out = np.append(snew, new_data[N * L: I])
-    data[:, 0] = out
+
+    # TODO: Check fft if there is the same error as in decoding phase ->20???
+
+    if is_stereo:
+        data[:, 0] = out
+    else:
+        data = out
 
     x = signal.split(".")
 

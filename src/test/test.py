@@ -1,18 +1,26 @@
 import src.main.LSBalgorithm.LSB_algorithm as LSB
 import src.test.GenerateRandomString.random_string as randomString
+import src.main.PhaseCoding.phase_enc as PhaseEncoding
+import src.main.PhaseCoding.phase_dec as PhaseDecoding
+
 import random as rd
 import difflib
 
 
-for i in range(10):
-    my_rand = rd.randint(130000, 132000)
-    text = randomString.randomStringwithDigitsAndSymbols(my_rand)
+def checkDiff(data1, data2):
+    for i in range(len(data1)):
+        if abs(abs(data1[i]) - abs(data2[i])) > 0.3:
+            print("phi_new: "  ,data1[i], "phi from decode: ", data2[i])
+
+for i in range(1000):
+    my_rand = rd.randint(0, 20)
+    text = randomString.randomStringwithDigitsAndSymbols(200)
     print(text)
     print("Licznik: ", i)
     print("Losowa liczba: ", my_rand)
 
-    print(LSB.encode("C:/Users/aslod/Documents/Ważne foldery/STUDIA/7 semestr/Praca inzynierska/Stegography/MyStego/src/data/data_to_embedding/coverAudio.wav", text))
-    new_text = LSB.decode("C:/Users/aslod/Documents/Ważne foldery/STUDIA/7 semestr/Praca inzynierska/Stegography/MyStego/src/data/data_from_embedding/stego_coverAudio.wav")
+    print(PhaseEncoding.encode("C:/Users/aslod/Documents/Ważne foldery/STUDIA/7 semestr/Praca inzynierska/Stegography/MyStego/src/data/data_to_embedding/coverAudio.wav", text))
+    new_text = PhaseDecoding.decode("C:/Users/aslod/Documents/Ważne foldery/STUDIA/7 semestr/Praca inzynierska/Stegography/MyStego/src/data/data_from_embedding/stego_coverAudio.wav")
 
     # if text == new_text:
     #     print("true")
@@ -25,6 +33,7 @@ for i in range(10):
     #     print(diff)
     #     break
 
+    # print(checkDiff(phi_new, Phi))
     output_list = [li for li in difflib.ndiff(text, new_text) if li[0] != ' ']
 
 

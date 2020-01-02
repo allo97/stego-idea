@@ -12,10 +12,10 @@ def encode(signal, text):
     # Read frames and convert to byte array
     frame_bytes = bytearray(list(song.readframes(song.getnframes())))
     len_frame_bytes = len(frame_bytes)
+
+
     # Append dummy data to fill out rest of the bytes.
-    # Receiver shall detect and remove these characters.
-
-
+    # check if file is too big to embed the data
     if len(text) * 8 > len_frame_bytes:
         answer = "Plik jest za duży! Usuń conajmniej " + str(abs(int((len_frame_bytes / 8 - len(text)) / 1.33))) + " znaków z pliku! \nSpróbuj jeszcze raz!"
         print(answer)

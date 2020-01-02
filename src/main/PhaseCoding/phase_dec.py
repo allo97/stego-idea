@@ -7,22 +7,37 @@ def decode(signal):
 
     data, samplerate = sf.read(signal)
 
-    F = 50
-    L = int(len(data) / F)
+    N = 10
+    L = int(len(data) / N)
     if L % 2 != 0:
         L = L - 1
 
-    # First segment
-    x = data[:L, 0]
+    # check if there is stereo signal and get the first segment
+    shape_of_data = np.shape(data)
+    new_data = []
+    if len(shape_of_data) > 1:
+        if shape_of_data[1] == 2:
+            # get one channel
+            new_data = data[:, 0]
+        else:
+            print("Program nie obsługuje więcej niż dwóch kanałów!")
+            exit()
+    else:
+        new_data = data
+
+
 
     # Phase angles of first segment
-    Phi = np.angle(np.fft.fft(x, axis=0))
+    segments = np.reshape(new_data[0:(N * L)], (L, N), 'F')
+    w = np.fft.fft(segments, axis=0)
+    Phi = np.angle(w)
 
     # Retrieving length back
     # First 32 bits are the length of the message, the rest of it is the message
-    length = Phi[L // 2 - 32:L // 2]
+    length = Phi[L // 2 - 32:L // 2, 0]
 
     text_length = []
+
     for count, ele in enumerate(length):
         if ele > 0:
             text_length.append(0)
@@ -33,14 +48,13 @@ def decode(signal):
     length_of_message = 0
     for ele in text_length:
         length_of_message = (length_of_message << 1) | ele
-
     # Retrieving data back from phases of first segments
     m = 8 * length_of_message
     #new_data = [chr(x) for x in np.zeros(m, dtype=int)]
     new_data = np.zeros(m, dtype=int)
 
     for i in range(m):
-        if Phi[L//2 - 32 - m + i] > 0:
+        if Phi[L//2 - 32 - m + i, 0] > 0:
             new_data[i] = 0
         else:
             new_data[i] = 1
