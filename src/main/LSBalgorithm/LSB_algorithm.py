@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 def encode(signal, text):
 
-    print("Wykonuję metodę najmniej znaczącego bitu...")
+    print("Wykonuję kodowanie metodą najmniej znaczącego bitu...")
     # read wave audio file
     song = wave.open(signal, mode='rb')
     song_name = signal.split("/")[-1]
@@ -43,7 +43,7 @@ def encode(signal, text):
 
 def decode(signal):
 
-    print("Wykonuję metodę najmniej znaczącego bitu...")
+    print("Wykonuję dekodowanie metodą najmniej znaczącego bitu...")
 
     song = wave.open(signal, mode='rb')
     # Convert audio to byte array

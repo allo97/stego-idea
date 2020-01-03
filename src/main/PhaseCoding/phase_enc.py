@@ -1,12 +1,16 @@
-import soundfile as sf
 import numpy as np
+from scipy.io import wavfile
+
 import matplotlib.pyplot as plt
 
 
 def encode(signal, text):
     print("Wykonuję kodowanie fazowe...")
 
-    data, samplerate = sf.read(signal)
+    # data, samplerate = sf.read(signal)
+
+    samplerate, data = wavfile.read(signal)
+    data = data.astype(np.float32, order='C') / 32768.0
 
     song_name = signal.split("/")[-1]
 
@@ -19,22 +23,15 @@ def encode(signal, text):
     if L % 2 != 0:
         L = L - 1
 
-    #check if there is stereo signal
+    #check if there is stereo signal and get the first channel
     shape_of_data = np.shape(data)
     is_stereo = True
-    new_data = []
     if len(shape_of_data) > 1:
-        if shape_of_data[1] == 2:
-            # get one channel
-            new_data = data[:, 0]
-        else:
-            print("Program nie obsługuje więcej niż dwóch kanałów!")
-            exit()
+        # get one channel
+        new_data = data[:, 0]
     else:
         new_data = data
         is_stereo = False
-
-
 
 
     # convert text to bit
@@ -52,9 +49,10 @@ def encode(signal, text):
     #check if file is too big to embed the data
     if L / 2 < m:
         answer = "Plik jest za duży! Usuń conajmniej " + str(
-            int((m - ((L / 2) - (L / 2) % 8)))/8) + " znaków z pliku! \nSpróbuj jeszcze raz!"
+            int(((m - ((L / 2) - (L / 2) % 8))/8) / 1.33)) + " znaków z pliku! \nSpróbuj jeszcze raz!"
         print(answer)
         exit()
+
     segments = np.reshape(new_data[0:(N * L)], (L, N), 'F')
 
     w = np.fft.fft(segments, axis=0)
@@ -127,7 +125,7 @@ def encode(signal, text):
 
     x = signal.split(".")
 
-    sf.write('../data/data_from_embedding/' + 'stego_' + song_name, data, samplerate)
+    wavfile.write('../data/data_from_embedding/' + 'stego_' + song_name, samplerate, data)
     return "Tekst zostal osadzony w: stego_ " + song_name
 
 

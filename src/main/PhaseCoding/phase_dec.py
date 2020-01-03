@@ -1,27 +1,24 @@
 import soundfile as sf
+from scipy.io import wavfile
 import numpy as np
 
 
-def decode(signal):
-    print("Wykonuję kodowanie fazowe...")
 
-    data, samplerate = sf.read(signal)
+def decode(signal):
+    print("Wykonuję dekodowanie fazowe...")
+
+    samplerate, data = wavfile.read(signal)
 
     N = 10
     L = int(len(data) / N)
     if L % 2 != 0:
         L = L - 1
 
-    # check if there is stereo signal and get the first segment
+    # check if there is stereo signal and get the first channel
     shape_of_data = np.shape(data)
-    new_data = []
     if len(shape_of_data) > 1:
-        if shape_of_data[1] == 2:
-            # get one channel
-            new_data = data[:, 0]
-        else:
-            print("Program nie obsługuje więcej niż dwóch kanałów!")
-            exit()
+        # get one channel
+        new_data = data[:, 0]
     else:
         new_data = data
 
@@ -48,9 +45,11 @@ def decode(signal):
     length_of_message = 0
     for ele in text_length:
         length_of_message = (length_of_message << 1) | ele
+    print(length_of_message)
+
     # Retrieving data back from phases of first segments
     m = 8 * length_of_message
-    #new_data = [chr(x) for x in np.zeros(m, dtype=int)]
+
     new_data = np.zeros(m, dtype=int)
 
     for i in range(m):

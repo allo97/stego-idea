@@ -13,9 +13,9 @@ def checkDiff(data1, data2):
             print("phi_new: "  ,data1[i], "phi from decode: ", data2[i])
 
 for i in range(1000):
-    my_rand = rd.randint(0, 20)
-    text = randomString.randomStringwithDigitsAndSymbols(200)
-    print(text)
+    my_rand = rd.randint(10, 20)
+    text = randomString.randomStringwithDigitsAndSymbols(my_rand)
+    print(my_rand)
     print("Licznik: ", i)
     print("Losowa liczba: ", my_rand)
 
