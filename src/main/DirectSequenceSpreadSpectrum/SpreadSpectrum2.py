@@ -100,6 +100,7 @@ def plot_two_signals(signal1, t1, signal2, t2, pos_start1, pos_end1, pos_start2,
     splt.set_ylabel(ylabel2)
 
     fig.canvas.set_window_title(str(plot_counter) + " " + title_window)
+    fig.canvas.set_window_title(str(plot_counter) + " " + title_window)
     if savefig:
         default_size = fig.get_size_inches()
         fig.set_size_inches((default_size[0] * 2, default_size[1] * 2))
@@ -110,7 +111,7 @@ def plot_two_signals(signal1, t1, signal2, t2, pos_start1, pos_end1, pos_start2,
     plt.close(fig)
 
 plot_counter = 0
-savefig = False
+savefig = True
 
 # Transmitt the message at given frequency
 message_frequency = 500
@@ -119,7 +120,7 @@ carrier_frequency = 44e3
 
 # nasz wav do ukrycia w nim danych
 
-data, samplerate = sf.read("C:/Users/aslod/Documents/Ważne foldery/STUDIA/7 semestr/Praca inzynierska/Stegography/MyStego/src/data/coverAudio.wav")
+data, samplerate = sf.read("C:/Users/aslod/Documents/Ważne foldery/STUDIA/7 semestr/Praca inzynierska/Stegography/MyStego/src/data/data_to_embedding/coverAudio.wav")
 
 #
 coarse_acquisition_code_frequency = carrier_frequency / 10

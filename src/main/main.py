@@ -12,7 +12,7 @@ def execute_encoding_algorithm(algorithm, audio_path, encrypted_text):
         3: lambda: "SpreadSpectrum()",
     }
 
-    func = switcher.get(algorithm, lambda: "Zla wartosc!")
+    func = switcher.get(algorithm, lambda: "Zła wartość!")
     return func()
 
 
@@ -23,7 +23,7 @@ def execute_decoding_algorithm(algorithm, audio_path):
         3: lambda: "SpreadSpectrum()",
     }
 
-    func = switcher.get(algorithm, lambda: "Zla wartosc!")
+    func = switcher.get(algorithm, lambda: "Zła wartość!")
     return func()
 
 

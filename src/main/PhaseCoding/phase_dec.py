@@ -1,36 +1,45 @@
-import soundfile as sf
 from scipy.io import wavfile
 import numpy as np
+from tqdm import tqdm
 
 
 
 def decode(signal):
     print("Wykonuję dekodowanie fazowe...")
 
-    samplerate, data = wavfile.read(signal)
+    samplerate, audio = wavfile.read(signal)
+
+    # audio = (audio / 32768.0).astype(np.dtype(np.float32))
+
+    if audio.dtype == "int16":
+        audio = audio.astype(np.float32, order='C') / 32768.0
+    elif audio.dtype == "float32":
+        pass
+    else:
+        print("not supported audio type for WAV, try converting to PCM16 or float32")
+        exit()
 
     N = 10
-    L = int(len(data) / N)
+    L = int(len(audio) / N)
     if L % 2 != 0:
         L = L - 1
 
     # check if there is stereo signal and get the first channel
-    shape_of_data = np.shape(data)
+    shape_of_data = np.shape(audio)
     if len(shape_of_data) > 1:
         # get one channel
-        new_data = data[:, 0]
+        text_from_phase = audio[:, 0]
     else:
-        new_data = data
+        text_from_phase = audio
 
 
 
     # Phase angles of first segment
-    segments = np.reshape(new_data[0:(N * L)], (L, N), 'F')
+    segments = np.reshape(text_from_phase[0:(N * L)], (L, N), 'F')
     w = np.fft.fft(segments, axis=0)
     Phi = np.angle(w)
 
-    # Retrieving length back
-    # First 32 bits are the length of the message, the rest of it is the message
+    # wyciągnij długość tekstu m ze środka pierwszego segmentu
     length = Phi[L // 2 - 32:L // 2, 0]
 
     text_length = []
@@ -42,24 +51,25 @@ def decode(signal):
             text_length.append(1)
 
     # Length of my message as integer
-    length_of_message = 0
+    m = 0
     for ele in text_length:
-        length_of_message = (length_of_message << 1) | ele
-    print(length_of_message)
+        m = (m << 1) | ele
+    print(m)
 
-    # Retrieving data back from phases of first segments
-    m = 8 * length_of_message
+    # Retrieving audio back from phases of first segments
+    bit_length_of_message = 8 * m
 
-    new_data = np.zeros(m, dtype=int)
+    text_from_phase = np.zeros(bit_length_of_message, dtype=int)
 
-    for i in range(m):
-        if Phi[L//2 - 32 - m + i, 0] > 0:
-            new_data[i] = 0
+    # wyciągnij kolejny bit tekstu z pierwszego segmentu i zamień na 0 lub 1
+    for i in tqdm(range(bit_length_of_message)):
+        if Phi[L//2 - 32 - bit_length_of_message + i, 0] > 0:
+            text_from_phase[i] = 0
         else:
-            new_data[i] = 1
+            text_from_phase[i] = 1
 
     # Converting to string
-    my_string = fromBits(new_data)
+    my_string = fromBits(text_from_phase)
     return my_string
 
 

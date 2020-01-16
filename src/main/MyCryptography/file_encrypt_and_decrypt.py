@@ -5,14 +5,15 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
-#key generation
-
-
+# metoda generująca klucz
 def generate_key(password):
 
-    password_provided = password  # This is input in the form of a string
-    password = password_provided.encode()  # Convert to type bytes
+    # Convert to type bytes
+    password = password.encode()
+
     salt1 = 'salt'.encode()
+
+    # parametry klasy pbkdf2 do uzyskania klucza kryptograficznego
     kdf = PBKDF2HMAC(
         algorithm=hashes.SHA256,
         length=32,
@@ -21,7 +22,8 @@ def generate_key(password):
         backend=default_backend()
     )
 
-    key = base64.urlsafe_b64encode(kdf.derive(password))  # Can only use kdf once
+    # generacja klucza z hasła i zamiana na znaki
+    key = base64.urlsafe_b64encode(kdf.derive(password))
     file = open('key.key', 'wb')
     file.write(key)  # The key is type bytes still
     file.close()
@@ -29,10 +31,10 @@ def generate_key(password):
     return key
 
 
-#file encryption
-
+# metoda szyfrująca przyjmująca plik tekstowy oraz haslo
 def encrypt_file(input_file, password):
 
+    # Stworzenie klucza na podstawie hasła
     key = generate_key(password)
 
     output_file = "test.encrypted"
@@ -41,7 +43,9 @@ def encrypt_file(input_file, password):
         data = f.read()
     print(len(data))
 
+    # Tworzenie obiektu kryptograficznego na podstawie klucza
     fernet = Fernet(key)
+    # Szyfrowanie tekstu z pliku
     encrypted = fernet.encrypt(data)
     print(len(encrypted))
 
@@ -53,22 +57,25 @@ def encrypt_file(input_file, password):
 
 #file decryption
 
-def decrypt_file(msg, password):
+def decrypt_file(message, password):
 
+    # Tworzenie tego samego klucza do odkodowywania
     key = generate_key(password)
 
     output_file = '../data/hidden_message/secret.decrypted'
 
+    # Tworzenie obiektu szyfrującego
     fernet = Fernet(key)
 
+    # Odszyfrowywanie wraz ze sprawdzeniem czy hasło jest prawidłowe
     try:
-        encrypted = fernet.decrypt(msg.encode('utf8'))
+        decrypted = fernet.decrypt(message.encode('utf8'))
     except (InvalidSignature, InvalidToken):
         return "Niewlasciwe haslo lub algorytm albo plik!\nSprawdz jeszcze raz!\nZamykam program"
     except:
         return "Nieoczekiwany blad"
 
     with open(output_file, 'wb') as f:
-        f.write(encrypted)
+        f.write(decrypted)
 
     return "Odzyskana wiadomosc: " + output_file.split("/")[-1]
